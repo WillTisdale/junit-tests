@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Student {
 
-    long id;
-    String name;
-    ArrayList<Integer> grades;
+    public static long id;
+    public static String name;
+    public static ArrayList<Integer> grades;
 
     public Student(long id, String name){
         this.id = id;
@@ -12,11 +12,11 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
-    public long getId(){
+    public static long getId(){
         return id;
     }
 
-    public String getName(){
+    public static String getName(){
         return name;
     }
 
@@ -24,17 +24,18 @@ public class Student {
         grades.add(grade);
     }
 
-    public ArrayList<Integer> getGrades(){
+    public static ArrayList<Integer> getGrades(){
         return grades;
     }
 
     public double getGradeAverage(){
-        int numOfGrades = grades.size();
+        double numOfGrades = grades.size();
         double total = 0;
         for(int grade:grades){
             total += grade;
         }
         return total / numOfGrades;
     }
+
 
 }
