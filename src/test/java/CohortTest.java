@@ -45,5 +45,6 @@ public class CohortTest {
     @Test
     public void testFindStudentById(){
         assertSame(newStudent, jupiter.findStudentById(7065432));
+        assertSame(newerStudent, jupiter.findStudentById(7065433));
     }
 }
